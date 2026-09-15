@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>English Placement Assessment | English With Marco</title>
+
+    <meta name="description"
+          content="Discover your English level with the English With Marco placement assessment.">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =====================================
+           ASSESSMENT PAGE
+        ===================================== */
+
+        .assessment-page {
+            min-height: 100vh;
+
+            padding:
+                145px 20px
+                90px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .assessment-glow {
+            position: absolute;
+
+            width: 700px;
+            height: 700px;
+
+            top: -250px;
+            right: -250px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,232,138,.10),
+                    transparent 68%
+                );
+
+            pointer-events: none;
+        }
+
+        .assessment-container {
+            width: min(1050px, 94%);
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .assessment-header {
+            text-align: center;
+
+            max-width: 720px;
+
+            margin: 0 auto 55px;
+        }
+
+        .assessment-header .section-tag {
+            display: inline-block;
+
+            margin-bottom: 15px;
+        }
+
+        .assessment-header h1 {
+            font-family: "Manrope", sans-serif;
+
+            font-size:
+                clamp(42px, 6vw, 68px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+        }
+
+        .assessment-header h1 span {
+            color: var(--green);
+        }
+
+        .assessment-header p {
+            color: var(--muted);
+
+            font-size: 15px;
+
+            max-width: 620px;
+
+            margin:
+                22px auto 0;
+        }
+
+
+        /* MAIN CARD */
+
+        .assessment-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20,37,30,.96),
+                    rgba(9,19,15,.96)
+                );
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 26px;
+
+            padding: 45px;
+
+            box-shadow:
+                0 30px 90px rgba(0,0,0,.35);
+        }
+
+
+        /* TOP INFO */
+
+        .assessment-meta {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-bottom: 40px;
+        }
+
+        .meta-box {
+            padding: 18px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,.02);
+        }
+
+        .meta-box svg {
+            width: 19px;
+
+            color: var(--green);
+
+            margin-bottom: 10px;
+        }
+
+        .meta-box span {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.2px;
+
+            font-weight: 800;
+        }
+
+        .meta-box strong {
+            display: block;
+
+            font-size: 13px;
+
+            margin-top: 3px;
+        }
+
+
+        /* SKILLS */
+
+        .skills-title {
+            margin-bottom: 20px;
+        }
+
+        .skills-title h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 21px;
+        }
+
+        .skills-title p {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-top: 5px;
+        }
+
+        .skill-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 40px;
+        }
+
+        .skill {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 16px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,.018);
+        }
+
+        .skill-icon {
+            width: 38px;
+            height: 38px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(0,232,138,.07);
+
+            color: var(--green);
+        }
+
+        .skill-icon svg {
+            width: 17px;
+        }
+
+        .skill strong {
+            display: block;
+
+            font-size: 12px;
+        }
+
+        .skill span {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+            margin-top: 2px;
+        }
+
+
+        /* SPEAKING NOTICE */
+
+        .speaking-notice {
+            display: flex;
+
+            gap: 15px;
+
+            padding: 20px;
+
+            border:
+                1px solid
+                rgba(0,232,138,.18);
+
+            border-radius: 14px;
+
+            background:
+                rgba(0,232,138,.035);
+
+            margin-bottom: 35px;
+        }
+
+        .speaking-notice-icon {
+            width: 40px;
+            height: 40px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(0,232,138,.08);
+
+            color: var(--green);
+        }
+
+        .speaking-notice h3 {
+            font-size: 13px;
+
+            margin-bottom: 4px;
+        }
+
+        .speaking-notice p {
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+
+        /* DIVIDER */
+
+        .assessment-divider {
+            height: 1px;
+
+            background:
+                var(--border);
+
+            margin:
+                35px 0;
+        }
+
+
+        /* CTA */
+
+        .assessment-action {
+            text-align: center;
+        }
+
+        .assessment-action h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 25px;
+        }
+
+        .assessment-action p {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin:
+                8px auto 22px;
+
+            max-width: 520px;
+        }
+
+        .assessment-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding:
+                16px 26px;
+
+            border-radius: 12px;
+
+            background:
+                var(--green);
+
+            color: #03130c;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition:
+                .25s ease;
+        }
+
+        .assessment-button:hover {
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,232,138,.22);
+        }
+
+        .assessment-button svg {
+            width: 17px;
+        }
+
+        .assessment-action small {
+            display: block;
+
+            color: #52605a;
+
+            font-size: 9px;
+
+            margin-top: 13px;
+        }
+
+
+        /* BACK LINK */
+
+        .back-home {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: var(--muted);
+
+            font-size: 11px;
+
+            margin-bottom: 25px;
+
+            transition: .2s ease;
+        }
+
+        .back-home:hover {
+            color: var(--green);
+        }
+
+        .back-home svg {
+            width: 14px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            .assessment-page {
+                padding-top: 125px;
+            }
+
+            .assessment-card {
+                padding: 25px;
+            }
+
+            .assessment-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .assessment-header h1 {
+                letter-spacing: -2px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">EM</span>
+
+            <span class="brand-text">
+                <strong>English With Marco</strong>
+                <small>Personalized English Instruction</small>
+            </span>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html#how-it-works">
+                How It Works
+            </a>
+
+            <a href="index.html#learning">
+                Learning
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="assessment-page">
+
+    <div class="assessment-glow"></div>
+
+    <div class="assessment-container">
+
+        <a href="index.html" class="back-home">
+            <i data-lucide="arrow-left"></i>
+            Back to English With Marco
+        </a>
+
+
+        <!-- HEADER -->
+
+        <div class="assessment-header">
+
+            <span class="section-tag">
+                ENGLISH PLACEMENT ASSESSMENT
+            </span>
+
+            <h1>
+                Discover your
+                <span>English level.</span>
+            </h1>
+
+            <p>
+                Before we build your learning path, let's understand
+                where your English is today. This assessment helps
+                identify your current strengths and areas for development.
+            </p>
+
+        </div>
+
+
+        <!-- CARD -->
+
+        <div class="assessment-card">
+
+
+            <!-- META -->
+
+            <div class="assessment-meta">
+
+                <div class="meta-box">
+
+                    <i data-lucide="clock-3"></i>
+
+                    <span>Estimated Time</span>
+
+                    <strong>30–40 minutes</strong>
+
+                </div>
+
+
+                <div class="meta-box">
+
+                    <i data-lucide="layers-3"></i>
+
+                    <span>Assessment Areas</span>
+
+                    <strong>5+ English Skills</strong>
+
+                </div>
+
+
+                <div class="meta-box">
+
+                    <i data-lucide="award"></i>
+
+                    <span>Framework</span>
+
+                    <strong>CEFR-Aligned</strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="skills-title">
+
+                <h2>
+                    What will be assessed?
+                </h2>
+
+                <p>
+                    The assessment evaluates several important areas of
+                    practical English ability.
+                </p>
+
+            </div>
+
+
+            <div class="skill-grid">
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>Grammar</strong>
+                        <span>
+                            Accuracy, structure and usage
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+                        <i data-lucide="languages"></i>
+                    </div>
+
+                    <div>
+                        <strong>Vocabulary</strong>
+                        <span>
+                            Range, meaning and appropriate usage
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+
+                    <div>
+                        <strong>Reading</strong>
+                        <span>
+                            Comprehension and interpretation
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+                        <i data-lucide="pen-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>Writing</strong>
+                        <span>
+                            Clarity, organization and language control
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+                        <i data-lucide="headphones"></i>
+                    </div>
+
+                    <div>
+                        <strong>Listening</strong>
+                        <span>
+                            Understanding spoken English
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+
+                    <div>
+                        <strong>Speaking</strong>
+                        <span>
+                            Evaluated separately with your instructor
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPEAKING -->
+
+            <div class="speaking-notice">
+
+                <div class="speaking-notice-icon">
+                    <i data-lucide="mic"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Speaking is evaluated separately
+                    </h3>
+
+                    <p>
+                        Your online assessment covers the written and
+                        receptive skills first. A separate speaking
+                        evaluation with Marco will assess fluency,
+                        pronunciation, interaction, vocabulary and
+                        communicative ability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="assessment-divider"></div>
+
+
+            <!-- CTA -->
+
+            <div class="assessment-action">
+
+                <h2>
+                    Ready to find your level?
+                </h2>
+
+                <p>
+                    Set aside approximately 30–40 minutes, find a quiet
+                    place, and answer each question as naturally and
+                    honestly as possible.
+                </p>
+
+
+                <!--
+                IMPORTANT:
+                Replace the # below with your Google Forms URL.
+                -->
+
+                <a
+                    href="#"
+                    class="assessment-button"
+                    id="beginAssessment"
+                >
+                    Begin Assessment
+
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <small>
+                    Your results will help guide your personalized
+                    learning plan.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="brand-mark">
+                EM
+            </div>
+
+            <div>
+                <strong>English With Marco</strong>
+
+                <span>
+                    Personalized English Instruction
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="assessment.html">
+                Placement Test
+            </a>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © <span id="year"></span>
+            English With Marco
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    lucide.createIcons();
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /*
+       GOOGLE FORM CONNECTION
+
+       Replace the URL below with your existing
+       Google Form URL.
+    */
+
+    const googleFormURL = "PASTE-YOUR-GOOGLE-FORM-URL-HERE";
+
+
+    document
+        .getElementById("beginAssessment")
+        .addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            if (
+                googleFormURL ===
+                "https://docs.google.com/forms/d/e/1FAIpQLSfzN_rXTKshqr3299LzTHtY1PLYZD0k2LqcznocRTqIpDHzrQ/viewform?usp=sharing&ouid=102413722462286754236"
+            ) {
+
+                alert(
+                    "The assessment form has not been connected yet."
+                );
+
+                return;
+
+            }
+
+            window.location.href = googleFormURL;
+
+        });
+
+</script>
+
+</body>
+</html>
