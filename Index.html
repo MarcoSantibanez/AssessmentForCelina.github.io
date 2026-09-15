@@ -1,18 +1,589 @@
-English-With-Marco/
-│
-├── index.html             
-│
-├── assessment/
-│   └── index.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── app.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-└── README.md
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>English With Marco | Personalized 1-on-1 English Lessons</title>
+
+    <meta name="description"
+          content="Personalized 1-on-1 online English instruction with Marco. Find your CEFR level, build a personalized learning plan, and improve with structured lessons.">
+
+    <meta name="theme-color" content="#08110e">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">EM</span>
+
+            <span class="brand-text">
+                <strong>English With Marco</strong>
+                <small>Personalized English Instruction</small>
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#learning">Learning</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+            <a href="assessment.html" class="nav-button">
+                Placement Test
+            </a>
+        </nav>
+
+        <button class="mobile-menu" aria-label="Open menu">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span class="status-dot"></span>
+                Personalized 1-on-1 English Instruction
+            </div>
+
+            <h1>
+                Your English.
+                <span>Your Next Level.</span>
+            </h1>
+
+            <p class="hero-description">
+                Improve your English through structured, personalized
+                instruction designed around your goals, your current level,
+                and the way you learn best.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="assessment.html" class="primary-button">
+                    Take Placement Test
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+                <a href="#how-it-works" class="secondary-button">
+                    See How It Works
+                </a>
+
+            </div>
+
+            <div class="hero-note">
+                <i data-lucide="clock-3"></i>
+                Start by discovering your current English level.
+            </div>
+
+        </div>
+
+
+        <!-- HERO CARD -->
+
+        <div class="hero-card">
+
+            <div class="card-top">
+
+                <div>
+                    <span class="card-label">CEFR JOURNEY</span>
+                    <h3>Your Learning Path</h3>
+                </div>
+
+                <div class="level-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+
+            </div>
+
+
+            <div class="cefr-path">
+
+                <div class="level active">
+                    <span>A1</span>
+                    <small>Beginner</small>
+                </div>
+
+                <div class="path-line"></div>
+
+                <div class="level">
+                    <span>A2</span>
+                    <small>Elementary</small>
+                </div>
+
+                <div class="path-line"></div>
+
+                <div class="level">
+                    <span>B1</span>
+                    <small>Intermediate</small>
+                </div>
+
+                <div class="path-line"></div>
+
+                <div class="level">
+                    <span>B2</span>
+                    <small>Upper-Intermediate</small>
+                </div>
+
+                <div class="path-line"></div>
+
+                <div class="level">
+                    <span>C1</span>
+                    <small>Advanced</small>
+                </div>
+
+            </div>
+
+
+            <div class="card-footer">
+
+                <div>
+                    <span class="mini-label">APPROACH</span>
+                    <strong>Personalized</strong>
+                </div>
+
+                <div>
+                    <span class="mini-label">FORMAT</span>
+                    <strong>1-on-1 Online</strong>
+                </div>
+
+                <div>
+                    <span class="mini-label">PROGRESS</span>
+                    <strong>Measurable</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRUST STRIP ================= -->
+
+<section class="trust-strip">
+
+    <div class="trust-container">
+
+        <div>
+            <i data-lucide="target"></i>
+            <span>Goal-focused instruction</span>
+        </div>
+
+        <div>
+            <i data-lucide="user-round"></i>
+            <span>One student at a time</span>
+        </div>
+
+        <div>
+            <i data-lucide="bar-chart-3"></i>
+            <span>CEFR-aligned progress</span>
+        </div>
+
+        <div>
+            <i data-lucide="laptop"></i>
+            <span>Online learning</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="how-it-works" class="section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">THE PROCESS</span>
+
+            <h2>
+                English learning with
+                <span>a clear direction.</span>
+            </h2>
+
+            <p>
+                Instead of guessing what you need to study next,
+                we start by understanding where you are and where
+                you want to go.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <article class="process-card">
+
+                <div class="step-number">01</div>
+
+                <div class="process-icon">
+                    <i data-lucide="clipboard-check"></i>
+                </div>
+
+                <h3>Discover Your Level</h3>
+
+                <p>
+                    Complete a structured placement assessment covering
+                    key English skills.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <div class="step-number">02</div>
+
+                <div class="process-icon">
+                    <i data-lucide="route"></i>
+                </div>
+
+                <h3>Build Your Path</h3>
+
+                <p>
+                    Your results help identify strengths, weaknesses,
+                    and the areas that deserve the most attention.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <div class="step-number">03</div>
+
+                <div class="process-icon">
+                    <i data-lucide="video"></i>
+                </div>
+
+                <h3>Learn 1-on-1</h3>
+
+                <p>
+                    Work directly with Marco through focused,
+                    personalized online lessons.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <div class="step-number">04</div>
+
+                <div class="process-icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+
+                <h3>Measure Progress</h3>
+
+                <p>
+                    Track your development and adjust your learning
+                    plan as your English improves.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LEARNING EXPERIENCE ================= -->
+
+<section id="learning" class="section dark-section">
+
+    <div class="section-container">
+
+        <div class="learning-layout">
+
+            <div class="learning-content">
+
+                <span class="section-tag">THE EXPERIENCE</span>
+
+                <h2>
+                    Lessons built
+                    <span>around you.</span>
+                </h2>
+
+                <p>
+                    Your English journey should not be a collection of
+                    random exercises. Every lesson should have a purpose.
+                </p>
+
+
+                <div class="feature-list">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i data-lucide="crosshair"></i>
+                        </div>
+
+                        <div>
+                            <h3>Personalized Goals</h3>
+                            <p>
+                                Focus on the English skills that matter
+                                most to your personal or professional goals.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i data-lucide="layers-3"></i>
+                        </div>
+
+                        <div>
+                            <h3>Structured Lessons</h3>
+                            <p>
+                                Build skills progressively instead of
+                                jumping randomly between topics.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+
+                        <div>
+                            <h3>Continuous Progress</h3>
+                            <p>
+                                Identify improvement areas and continuously
+                                adapt your learning path.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-panel">
+
+                <div class="panel-header">
+                    <span>LEARNING MODEL</span>
+
+                    <div class="panel-status">
+                        <span></span>
+                        Active
+                    </div>
+                </div>
+
+
+                <div class="model-item">
+                    <span>01</span>
+                    <strong>Assess</strong>
+                    <small>Understand your current level</small>
+                </div>
+
+                <div class="model-item">
+                    <span>02</span>
+                    <strong>Plan</strong>
+                    <small>Define your learning priorities</small>
+                </div>
+
+                <div class="model-item">
+                    <span>03</span>
+                    <strong>Practice</strong>
+                    <small>Develop skills through targeted lessons</small>
+                </div>
+
+                <div class="model-item">
+                    <span>04</span>
+                    <strong>Review</strong>
+                    <small>Measure progress and adjust</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="section-container">
+
+        <div class="about-card">
+
+            <div class="about-avatar">
+                M
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-tag">MEET YOUR INSTRUCTOR</span>
+
+                <h2>
+                    Learn English with
+                    <span>Marco.</span>
+                </h2>
+
+                <p>
+                    English With Marco provides personalized online
+                    English instruction for students who want more than
+                    generic lessons.
+                </p>
+
+                <p>
+                    The approach combines structured learning,
+                    communication practice, individualized feedback,
+                    and measurable progress.
+                </p>
+
+                <div class="credentials">
+
+                    <div>
+                        <strong>TKT</strong>
+                        <span>Modules 1–3</span>
+                    </div>
+
+                    <div>
+                        <strong>1-on-1</strong>
+                        <span>Personal Instruction</span>
+                    </div>
+
+                    <div>
+                        <strong>CEFR</strong>
+                        <span>Aligned Learning</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section id="contact" class="cta-section">
+
+    <div class="cta-container">
+
+        <div class="cta-glow"></div>
+
+        <span class="section-tag">READY TO START?</span>
+
+        <h2>
+            Find out where
+            <span>your English stands.</span>
+        </h2>
+
+        <p>
+            Take the placement assessment and begin building
+            a learning path designed specifically for you.
+        </p>
+
+        <a href="assessment.html" class="primary-button large">
+            Begin Placement Assessment
+            <i data-lucide="arrow-up-right"></i>
+        </a>
+
+        <small>
+            No commitment required to take the assessment.
+        </small>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="brand-mark">EM</div>
+
+            <div>
+                <strong>English With Marco</strong>
+                <span>Personalized English Instruction</span>
+            </div>
+
+        </div>
+
+        <div class="footer-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#learning">Learning</a>
+            <a href="#about">About</a>
+            <a href="assessment.html">Placement Test</a>
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> English With Marco
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
