@@ -757,9 +757,11 @@
                 -->
 
                 <a
-                    href="#"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfzN_rXTKshqr3299LzTHtY1PLYZD0k2LqcznocRTqIpDHzrQ/viewform?usp=sharing&ouid=102413722462286754236"
                     class="assessment-button"
-                    id="beginAssessment"
+                    id="beginAssessmetarget="_blank"
+                    rel="noopener noreferrer"nt"
+                    
                 >
                     Begin Assessment
 
@@ -834,38 +836,7 @@
         new Date().getFullYear();
 
 
-    /*
-       GOOGLE FORM CONNECTION
-
-       Replace the URL below with your existing
-       Google Form URL.
-    */
-
-    const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSfzN_rXTKshqr3299LzTHtY1PLYZD0k2LqcznocRTqIpDHzrQ/viewform?usp=sharing&ouid=102413722462286754236";
-
-
-    document
-        .getElementById("beginAssessment")
-        .addEventListener("click", function(event) {
-
-            event.preventDefault();
-
-            if (
-                googleFormURL ===
-                "https://docs.google.com/forms/d/e/1FAIpQLSfzN_rXTKshqr3299LzTHtY1PLYZD0k2LqcznocRTqIpDHzrQ/viewform?usp=sharing&ouid=102413722462286754236"
-            ) {
-
-                alert(
-                    "The assessment form has not been connected yet."
-                );
-
-                return;
-
-            }
-
-            window.location.href = googleFormURL;
-
-        });
+  
 
 </script>
 
